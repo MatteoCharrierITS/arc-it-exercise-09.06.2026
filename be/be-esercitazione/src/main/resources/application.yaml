@@ -1,3 +1,9 @@
 spring:
   application:
     name: be-esercitazione
+    
+  datasource:
+    url: jdbc:postgresql://localhost:5432/esercitazione-db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver

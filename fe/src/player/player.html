@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player</title>
+  
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+
+  <h1>Gestione Player</h1>
+
+  <div class="form-card">
+    <form id="playerForm" style="display:contents;">
+      <div class="field">
+        <label for="ipInput">Indirizzo IP</label>
+        <input type="text" id="ipInput" name="ip" placeholder="es. 192.168.1.10" required />
+      </div>
+      <div class="field">
+        <label for="usernameInput">Username</label>
+        <input type="text" id="usernameInput" name="username" placeholder="es. mario_rossi" required />
+      </div>
+      <button type="button" class="btn-primary" onclick="addUser()">Aggiungi</button>
+    </form>
+  </div>
+
+  <div class="table-wrapper">
+    <table id="playerTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Indirizzo IP</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr class="empty-row">
+          <td colspan="4">Nessun player aggiunto.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/player.js"></script>
+
+</body>
+</html>

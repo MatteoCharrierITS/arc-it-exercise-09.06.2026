@@ -1,28 +1,28 @@
 CREATE TABLE users (
-    
-    id INTEGER PRIMARY KEY,
+
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     ip VARCHAR(50) NOT NULL UNIQUE,
-    name VARCHAR(50) NOT NULL UNIQUE
-    
+    username VARCHAR(50) NOT NULL UNIQUE
+
 );
 
 CREATE TABLE games (
-    
-    id INTEGER PRIMARY KEY,
+
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     state VARCHAR(50) NOT NULL,
-    turn INTEGER NOT NULL 
-    
+    turn INTEGER NOT NULL
+
 );
 
 CREATE TABLE moves (
-    
-    id INTEGER PRIMARY KEY,
+
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     game_id INTEGER NOT NULL,
-    player_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
     turn INTEGER NOT NULL,
     move VARCHAR(50) NOT NULL,
-    
+
     FOREIGN KEY (game_id) REFERENCES games(id),
-    FOREIGN KEY (player_id) REFERENCES users(id)
-    
+    FOREIGN KEY (user_id) REFERENCES users(id)
+
 );
