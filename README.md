@@ -43,8 +43,8 @@ Consulta le cartelle `be/` e `fe/` per le istruzioni di avvio specifiche. Ogni s
 - Invia una pull request con descrizione dei cambiamenti
 
 ## Links Utili
-[Front-End_Documentation](/fe/fe.md)
-[Back-End_Documentation](/be/be.md)
+- [Front-End_Documentation](/fe/fe.md)
+- [Back-End_Documentation](/be/be.md)
 
 
 
